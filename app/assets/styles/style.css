@@ -1,3 +1,27 @@
+$mainBlue: #2f5572;
+
+*:before,
+*:after,
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html{
     font-size: 62.5%;
+}
+
+body{
+    columns: 300px 2;
+    color: $mainBlue;
+}
+
+.box{
+    a{
+        display: block;
+        padding: 10px;
+        
+        color: $mainBlue;
+    }
 }
