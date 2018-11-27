@@ -17,6 +17,10 @@ gulp.task('watch', function(){
 	// Setting the path to be watched use ** to any hypotetical folders and *.css to any .css file
 	watch('./app/assets/styles/**/*.css', function(){
 		gulp.start('cssInject');
+	});
+
+	watch('./app/assets/scripts/**/*.js', function(){
+		gulp.start('scriptsRefresh');
 	})
 });
 
@@ -24,3 +28,7 @@ gulp.task('cssInject', ['styles'],function(){
 	return gulp.src('./app/temp/styles/style.css')
 		.pipe(browserSync.stream());
 });
+
+gulp.task('scriptsRefresh', ['scripts'], function(){
+	browserSync.reload();
+})

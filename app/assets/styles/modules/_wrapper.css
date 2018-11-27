@@ -1,8 +1,8 @@
 .wrapper{
     max-width: 1260px;
 
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     margin-left: auto;
     margin-right: auto;
@@ -31,8 +31,8 @@
         padding-right: 0;
 
         @mixin atMedium{
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -41,8 +41,8 @@
         padding-right: 0;
 
         @mixin atLarge{
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 }
