@@ -964,6 +964,10 @@ Instead edit gulp/templates/sprite.css */
         max-width: 976px;
     }
 
+.wrapper--narrow{
+        max-width: 470px;
+    }
+
 .wrapper .wrapper{
         padding-left: 0;
         padding-right: 0;
@@ -1278,6 +1282,11 @@ Instead edit gulp/templates/sprite.css */
         color: #2f5572;
     }
 
+.section-title--less-margin{
+        margin-bottom: 1.3rem;
+        margin-top: 0;
+    }
+
 .section-title__icon{
         display: block;
 
@@ -1446,3 +1455,112 @@ Instead edit gulp/templates/sprite.css */
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal{
+    position: fixed;
+    /* Bellow a simple way of making something full screen */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(255, 255, 255, .94);
+
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transform: scale(1.2);
+
+            transform: scale(1.2);
+    
+    -webkit-transition: all .3s ease-out;
+    
+    transition: all .3s ease-out;
+
+    z-index: 100;
+}
+
+.modal__description{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.65;
+    }
+
+.modal__close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+            
+        cursor: pointer;
+
+        font-size: 2rem;
+        color: #2f5572;
+
+        -webkit-transform: scaleX(1.2);
+
+                transform: scaleX(1.2);
+        -webkit-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+
+        -webkit-transition: color .3s ease-out;
+
+        transition: color .3s ease-out;
+    }
+
+.modal__close:hover{
+            color: #d59541;
+        }
+
+.modal__inner{
+        position: absolute;
+        top: 50%;
+
+        width: 100%;
+
+        -webkit-transform: translateY(-50%);
+
+                transform: translateY(-50%);
+    }
+
+.modal--is-visible{
+        opacity: 1;
+        visibility: visible;
+
+        -webkit-transform: scale(1);
+
+                transform: scale(1);
+    }
+
+.social-icons{
+    text-align: center;
+}
+
+.social-icons__icon{
+        position: relative;
+        display: inline-block;
+        width: 33%;
+        height: 72px;
+        margin: 0 5px 5px 5px;
+
+        background-color: #d59541;
+    }
+
+@media (min-width: 530px){
+
+.social-icons__icon{
+            width: 72px;
+            margin: 0 5px
+    }
+    }
+
+.social-icons__icon .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+
+            -webkit-transform: translate(-50%, -50%);
+
+                    transform: translate(-50%, -50%);
+        }
