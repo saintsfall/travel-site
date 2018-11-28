@@ -458,6 +458,10 @@ html{
             box-sizing: border-box;
 }
 
+/* html{
+    scroll-behavior: smooth;
+} */
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -569,9 +573,14 @@ Instead edit gulp/templates/sprite.css */
 @media (min-width: 800px){
 
 .site-header{
+        position: fixed;
         background-color: rgba(47,85,114, .3)
 
 }
+
+        .site-header--dark{
+            background-color: rgba(23, 51, 72, .85);
+        }
     }
 
 .site-header__menu-content{
@@ -629,6 +638,10 @@ Instead edit gulp/templates/sprite.css */
         -webkit-transform-origin: 50% 0;
                 transform-origin: 50% 0;
 
+        -webkit-transition: all .3s ease-out;
+
+        transition: all .3s ease-out;
+
         padding: 25px 36px;
 
         background-color: #2f5572;
@@ -643,6 +656,11 @@ Instead edit gulp/templates/sprite.css */
 
                     transform: translateX(0)
     }
+        
+            .site-header--dark .site-header__logo{
+                -webkit-transform: scale(.56);
+                        transform: scale(.56);        
+            }
     }
 
 .site-header__logo__graphic{
@@ -804,6 +822,10 @@ Instead edit gulp/templates/sprite.css */
         color: white;
         
         background-color: rgba(47,85,114, .5);
+
+        -webkit-transition: all .3s ease-out;
+
+        transition: all .3s ease-out;
     }
 
 @media (min-width: 800px){
@@ -814,6 +836,10 @@ Instead edit gulp/templates/sprite.css */
 
             background-color: transparent
     }
+
+            .primary-nav a.is-current-link{
+                color: #fabb69;
+            }
     }
 
 .large-hero {

@@ -52,11 +52,17 @@
         
         background-color: rgba($mainBlue, .5);
 
+        transition: all .3s ease-out;
+
         @mixin atMedium{
             font-size: 1rem;
             padding: 12px 0;
 
             background-color: transparent;
+
+            &.is-current-link{
+                color: #fabb69;
+            }
         }
     }
 }
